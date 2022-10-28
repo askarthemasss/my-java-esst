@@ -14,6 +14,7 @@ public class Main {
             int b = scanner.nextInt();
             int n = scanner.nextInt();
             
+            // My Solution
             for(int j=1; j<= n; j++){
                 int x =0;
                 for(int k=0; k<j; k++){
@@ -21,6 +22,13 @@ public class Main {
                 }
                 System.out.print(a + x + " ");
             }
+            
+            // Best Solution
+//             for(int j=0;j<n;j++){
+//                 a = a + (int)Math.pow(2,j)*b;
+//                 System.out.print(a + " ");
+//             }
+            
             System.out.println();
             
         }        
