@@ -1,0 +1,153 @@
+﻿* Static is a keyword. If we declare any method as static, it is known as the static method. The core advantage of the static method is that there is no need to create an object to invoke the static method. The main() method is executed by the JVM, so it doesn't require creating an object to invoke the main() method. So, it saves memory.
+
+
+
+
+* System.out.println() is used to print statement. Here, System is a class, out is an object of the PrintStream class, println() is a method of the PrintStream class. We will discuss the internal working of System.out.println() statement in the coming section.
+
+
+________________
+
+
+Variables
+Variable is a name of memory location. There are three types of variables in java: local, instance and static.
+There are two types of data types in Java: primitive and non-primitive.
+
+
+There are three types of variables in Java:
+* Local variable
+   * A variable declared inside the body of the method is called local variable. You can use this variable only within that method and the other methods in the class aren't even aware that the variable exists.
+   * A local variable cannot be defined with "static" keyword.
+* Instance variable
+   * A variable declared inside the class but outside the body of the method, is called an instance variable. It is not declared as static.
+   * It is called an instance variable because its value is instance-specific and is not shared among instances.
+* Static variable
+   * A variable that is declared as static is called a static variable. It cannot be local. You can create a single copy of the static variable and share it among all the instances of the class. Memory allocation for static variables happens only once when the class is loaded in the memory.
+________________
+
+
+public class A  
+{
+    static int m=100;                // static variable
+    void method()
+    {    
+        int n=90;                        // local variable
+    }
+    public static void main(String args[])
+    {
+        int data=50;                // instance variable
+    }
+}                                //end of class
+________________
+
+
+Data Types in Java
+1. Primitive data types: The primitive data types include boolean, char, byte, short, int, long, float and double.
+2. Non-primitive data types: The non-primitive data types include Classes, Interfaces, and Arrays.
+________________
+Java Operator Precedence
+
+
+Operator Type
+	Category
+	Precedence
+	Unary
+	postfix
+	expr++ expr--
+	prefix
+	++expr --expr +expr -expr ~ !
+	Arithmetic
+	multiplicative
+	* / %
+	additive
+	+ -
+	Shift
+	shift
+	<< >> >>>
+	Relational
+	comparison
+	< > <= >= instanceof
+	equality
+	== !=
+	Bitwise
+	bitwise AND
+	&
+	bitwise exclusive OR
+	^
+	bitwise inclusive OR
+	|
+	Logical
+	logical AND
+	&&
+	logical OR
+	||
+	Ternary
+	ternary
+	? :
+	Assignment
+	assignment
+	= += -= *= /= %= &= ^= |= <<= >>= >>>=
+	
+
+________________
+
+
+Java Enum in Switch Statement
+Java allows us to use enum in switch statement.
+Java enum is a class that represent the group of constants. (immutable such as final variables).
+We use the keyword enum and put the constants in curly braces separated by comma.
+
+
+public class JavaSwitchEnumExample {    
+           public enum Day  
+           {  
+                        Sun, Mon, Twe, Wed, Thu, Fri, Sat  
+           }  
+           public static void main(String args[])  
+           {  
+                     Day[] DayNow = Day.values();  
+                       for (Day Now : DayNow)  
+                       {  
+                                    System.out.println(Now);  
+                        }  
+            }  
+} 
+  
+
+Java Labeled For Loop
+
+
+We can have a name of each Java for loop. To do so, we use label before the for loop.
+It is useful while using the nested for loop as we can break/continue specific for loop.
+________________
+
+
+public class LabeledForExample {  
+public static void main(String[] args) {  
+    //Using Label for outer and for loop  
+    aa:  
+        for(int i=1;i<=3;i++){  
+            bb:  
+                for(int j=1;j<=3;j++){  
+                    if(i==2&&j==2){  
+                        break aa;  
+                    }  
+                    System.out.println(i+" "+j);  
+                }  
+        }  
+}  
+}
+
+
+Java Infinitive for Loop
+
+
+for(;;){  
+//code to be executed  
+} 
+
+
+while(true){
+        //code to be executed  
+}
+________________
