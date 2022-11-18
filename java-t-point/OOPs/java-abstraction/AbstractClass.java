@@ -64,3 +64,71 @@ class TestBank{
     System.out.println("Rate of Interest is: "+interest+" %");
   }
 }
+
+
+
+// Abstract class having constructor, data member and methods
+//example of abstract class that have method body
+ abstract class Bike{
+   Bike(){
+     System.out.println("bike is created");
+   }
+   abstract void run();
+   void changeGear(){
+     System.out.println("gear changed");
+   }
+ }
+
+ class Honda extends Bike{
+   void run(){
+     System.out.println("running safely..");
+   }
+ }
+ class TestAbstraction2{
+   public static void main(String args[]){
+    Bike obj = new Honda();
+    obj.run();
+    obj.changeGear();
+   }
+}
+/*
+       bike is created
+       running safely..
+       gear changed
+*/
+
+
+
+// The abstract class can also be used to provide some implementation of the interface.
+interface A{
+  void a();
+  void b();
+  void c();
+  void d();
+}
+
+abstract class B implements A{
+  public void c(){System.out.println("I am C");}
+}
+
+class M extends B{
+  public void a(){System.out.println("I am a");}
+  public void b(){System.out.println("I am b");}
+  public void d(){System.out.println("I am d");}
+}
+
+class Test5{
+  public static void main(String args[]){
+    A a=new M();
+    a.a();
+    a.b();
+    a.c();
+    a.d();
+  }
+}
+/*
+Output:I am a
+       I am b
+       I am C
+       I am d
+*/
