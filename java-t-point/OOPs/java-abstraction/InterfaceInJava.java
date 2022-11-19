@@ -112,3 +112,74 @@ class TestInterface3 implements Printable, Showable{
       obj.print();
     }
 }
+
+
+
+// Interface Inheritance
+interface Printable{
+  void print();
+}
+
+interface Showable extends Printable{
+  void show();
+}
+
+class TestInterface4 implements Showable{
+  public void print(){
+    System.out.println("Hello");
+  }
+  public void show(){
+    System.out.println("Welcome");
+  }
+
+  public static void main(String args[]){
+    TestInterface4 obj = new TestInterface4();
+    obj.print();
+    obj.show();
+  }
+}
+
+
+// Default method in Interface
+interface Drawable{
+  void draw();
+  default void msg(){
+    System.out.println("default method");
+  }
+}
+class Rectangle implements Drawable{
+  public void draw(){
+    System.out.println("drawing rectangle");
+  }
+}
+class TestInterfaceDefault{
+  public static void main(String args[]){
+    Drawable d=new Rectangle();
+    d.draw();
+    d.msg();
+  }
+}
+
+
+// Static method in Interface
+interface Drawable{
+  void draw();
+  static int cube(int x){
+    return x*x*x;
+  }
+}
+class Rectangle implements Drawable{
+  public void draw(){
+    System.out.println("drawing rectangle");
+  }
+}
+
+class TestInterfaceStatic{
+  public static void main(String args[]){
+    Drawable d=new Rectangle();
+    d.draw();                                 // drawing rectangle
+    System.out.println(Drawable.cube(3));     // 27
+  }
+}
+
+
