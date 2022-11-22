@@ -1,4 +1,5 @@
 // In this example, the Printable interface has only one method, and its implementation is provided in the A6 class.
+
 interface printable{
   void print();
 }
