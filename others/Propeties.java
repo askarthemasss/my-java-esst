@@ -20,7 +20,6 @@ public class App {
         // store/create
         p.store(os, null);
 
-
         // To fetch data - use InputStream
         InputStream is = new FileInputStream("dataConfig.properties");
         // before start working with properties file, we need to load the file first
