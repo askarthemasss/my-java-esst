@@ -8,8 +8,8 @@ class Honda extends Bike{
     System.out.println("Running Safely...");
   }
   public static void main(String[] args){
-    Honda H = new Honda();
-    H.run();      // Running Safely...
+    Bike B = new Honda();
+    B.run();      // Running Safely...
   }
 }
 
