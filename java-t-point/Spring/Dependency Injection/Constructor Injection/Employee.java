@@ -24,7 +24,7 @@ public class Employee{
     this.name = name;
   }
   
-  public void show(){
+  void show(){
     System.out.println(id + " - " + name);
   }
   
