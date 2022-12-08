@@ -12,7 +12,7 @@
     <constructor-arg value="Askar"></constructor-arg>
   </bean>
   <bean id="ans2" class="com.askar.Answer">
-     <constructor-arg value="2" type="int"></constructor-arg>
+    <constructor-arg value="2" type="int"></constructor-arg>
     <constructor-arg value="Java is a Platform"></constructor-arg>
     <constructor-arg value="Masss"></constructor-arg>
   </bean>
@@ -22,6 +22,16 @@
     <constructor-arg value="Surya"></constructor-arg>
   </bean>
   
-  <bean id="" class=""></bean>
+  <bean id="q" class="com.askar.Question">
+      <constructor-arg value="123" type="int"></constructor-arg>
+      <constructor-arg value="What is Java?"></constructor-arg>
+      <constructor-arg>
+          <list>
+              <ref bean="ans1"/>
+              <ref bean="ans2"/>
+              <ref bean="ans3"/>
+          </list>
+      </constructor-arg>
+  </bean>
   
 </beans>
